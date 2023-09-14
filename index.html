@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <link href="style.css" rel="stylesheet" type="text/css">
+    <style type="text/css" id="operaUserStyle"></style>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta http-equiv="Content-Security-Policy" content="default-src 'self' data: gap: https://ssl.gstatic.com 'unsafe-eval' 'unsafe-inline'; style-src 'self' 'unsafe-inline'; media-src *; img-src 'self' data: content:;">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Meal Plan Recommendation</title>
+</head>
+
+  
+  
+<body>
+    <div>
+        <h1 style = "margin-block-end:0em" class = "header text">Suggested Meal Points</h1>
+        <h3 style = "margin-block-start:0em" class="text"> (Fall Semester)</h3>
+        <div class = "exp">
+            <h1 style ="margin-block-end:0em" class = "points text" id="points"> Points: </h1>
+        </div>
+        <div>
+            <form action="/action_page.php">
+                <label for="plan">What meal plan do you have?</label>
+                <select id="plan" name = "plan" style="margin-bottom: 1rem;">
+                    <option value="Plat">Platinum</option>
+                    <option value="Gold">Gold</option>
+                    <option value="Silver">Silver</option>
+                    <option value="Bronze">Bronze</option>
+                    <option value="Apartment">Apartment</option>
+                    <option value="Off-Campus">Off-Campus</option>
+                </select><br><br>
+                <label for="wknd">Exclude Weekends?</label>
+                <input type="checkbox" id="wknd" name="wknd"><br><br>
+                <label for="break">Leaving for Fall Break?</label>
+                <input type="checkbox" id="break" name="break"><br><br>
+                <label for="thanks">Leaving for Thanksgiving Break?</label>
+                <input type="checkbox" id="thanks" name="thanks"><br><br>
+                <label for="first"> When was your first day?</label>
+                <input style = "margin-bottom:1rem" type="date" id = "first" name = "first"><br><br>
+                <label for="last"> When was your last day?</label>
+                <input style = "margin-bottom:0.5rem" type="date" id = "last" name = "last"><br><br>
+            </form>
+        </div>
+        <button id="btn" style="margin-left:1rem"> Calculate! </button>
+    </div>
+</body>
+
+
+<script src="calculate.js"></script>
+
+</html>
