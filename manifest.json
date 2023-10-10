@@ -15,5 +15,6 @@
             "64": "icons/MPL64.png",
             "128": "icons/MPL128.png"
         }
-      }
+      },
+    "permissions": ["storage"]
 }

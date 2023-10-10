@@ -18,7 +18,11 @@
         <h1 style = "margin-block-end:0em" class = "header text">Suggested Meal Points</h1>
         <h3 style = "margin-block-start:0em" class="text"> (Fall Semester)</h3>
         <div class = "exp">
-            <h1 style ="margin-block-end:0em" class = "points text" id="points"> Points: </h1>
+            <h1 style ="margin-block-end:0em" class = "points text" id="points"> Points: 
+                <span class = "tooltiptext"> Help! </span>
+            </h1>
+            
+            <h2 style ="margin-block-end:0em" class = "text tooltip" id = "daily"> Meal Points Per Day: </h2>
         </div>
         <div>
             <form action="/action_page.php">
@@ -42,8 +46,8 @@
                 <label for="last"> When was your last day?</label>
                 <input style = "margin-bottom:0.5rem" type="date" id = "last" name = "last"><br><br>
             </form>
-        </div>
-        <button id="btn" style="margin-left:1rem"> Calculate! </button>
+</div>
+        <button id="btn" style="margin-left:1rem;--color:rgb(88 199 250);--border:2px;--slant:.5em"> Calculate! </button>
     </div>
 </body>
 

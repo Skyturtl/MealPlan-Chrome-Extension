@@ -12,13 +12,15 @@ document.getElementById('last').valueAsDate = new Date("Fri Dec 15 2023 00:00:00
 document.addEventListener('DOMContentLoaded', function() {
     document.getElementById("btn").addEventListener("click", unhide);
   });
-
+  chrome.storage.sync.set({ "yourBody": "myBody" }, function(){
+});
 function unhide() {
     var hid = document.getElementsByClassName("exp");
-    if(hid[0].offsetWidth > 0 && hid[0].offsetHeight > 0) {
-        hid[0].style.visibility = "visible";
-    }
+    hid[0].style.height = "71px";
+    hid[0].style.visibility = "visible";
+    hid[0].style.opacity = "1";
     var total = 0;
+    var all = 0;
     var x = document.getElementById("wknd").checked;
     var y = document.getElementById("break").checked;
     var z = document.getElementById("thanks").checked;
@@ -28,6 +30,7 @@ function unhide() {
     var diff2 = Math.floor((Date.parse(last_day) - Date.parse(first_day)) / 86400000);
     var weekendLong = countWeekendDays(first_day, last_day);
     var weekendShort = countWeekendDays(today, last_day);
+    
     if(document.getElementById("plan").value == "Plat"){
         total = 2960;
     }
@@ -46,24 +49,23 @@ function unhide() {
     if(document.getElementById("plan").value == "Off-Campus"){
         total = 453;
     }
+    all = total;
     if(y){
         if(x){
             diff+=2;
+            diff-=weekendShort;
         }
         diff-=4;
     }
     if(z){
         if(x){
             diff+=2;
+            diff-=weekendShort;
         }
         diff-=5;
     }
-    if(x){
-        total = total*(diff-weekendShort)/(diff2);
-    }
-    else{
-        total = total*(diff/diff2);
-    }
-    document.getElementById('points').innerHTML = "Points: " + Math.round(100*total)/100;
+    total = total*(diff/diff2);
+    document.getElementById('points').innerHTML = "Points: " + Math.round(100*total)/100 + "   <span class = \"tooltip\">ⓘ <span class = \"tooltiptext w0\"> This is what you should be at. Compare with your current points! </span> </span>";
+    document.getElementById('daily').innerHTML = "Meal Points Per Day: " + Math.round(100*total/(diff))/100 + "   <span class = \"tooltip\">ⓘ <span class = \"tooltiptext w1\"> Days left at school: " + diff + ". Break days are excluded. </span> </span>";
 }
 
