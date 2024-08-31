@@ -6,8 +6,8 @@ function countWeekendDays( d0, d1 )
 }
 
 var today = new Date();
-document.getElementById('first').valueAsDate = new Date("Sun Aug 20 2023 00:00:00 GMT-0500 (Central Daylight Time)");
-document.getElementById('last').valueAsDate = new Date("Fri Dec 15 2023 00:00:00 GMT-0500 (Central Daylight Time)");
+document.getElementById('first').valueAsDate = new Date("Sun Aug 26 2024 00:00:00 GMT-0500 (Central Daylight Time)");
+document.getElementById('last').valueAsDate = new Date("Fri Dec 18 2024 00:00:00 GMT-0500 (Central Daylight Time)");
 
 document.addEventListener('DOMContentLoaded', function() {
     document.getElementById("btn").addEventListener("click", unhide);

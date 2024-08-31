@@ -11,23 +11,21 @@
     <title>Meal Plan Recommendation</title>
 </head>
 
-  
-  
+
 <body>
     <div>
-        <h1 style = "margin-block-end:0em" class = "header text">Suggested Meal Points</h1>
-        <h3 style = "margin-block-start:0em" class="text"> (Fall Semester)</h3>
-        <div class = "exp">
-            <h1 style ="margin-block-end:0em" class = "points text" id="points"> Points: 
-                <span class = "tooltiptext"> Help! </span>
+        <h1 class="header text">Suggested Meal Points</h1>
+        <h3 class="subhead text"> (Fall Semester)</h3>
+        <div class="exp">
+            <h1 class="points text" id="points"> Points:
+                <span class="tooltiptext"> Help! </span>
             </h1>
-            
-            <h2 style ="margin-block-end:0em" class = "text tooltip" id = "daily"> Meal Points Per Day: </h2>
+            <h2 class="text tooltip" id="daily"> Meal Points Per Day: </h2>
         </div>
         <div>
             <form action="/action_page.php">
                 <label for="plan">What meal plan do you have?</label>
-                <select id="plan" name = "plan" style="margin-bottom: 1rem;">
+                <select id="plan" name="plan">
                     <option value="Plat">Platinum</option>
                     <option value="Gold">Gold</option>
                     <option value="Silver">Silver</option>
@@ -42,16 +40,14 @@
                 <label for="thanks">Leaving for Thanksgiving Break?</label>
                 <input type="checkbox" id="thanks" name="thanks"><br><br>
                 <label for="first"> When was your first day?</label>
-                <input style = "margin-bottom:1rem" type="date" id = "first" name = "first"><br><br>
+                <input type="date" id="first" name="first"><br><br>
                 <label for="last"> When was your last day?</label>
-                <input style = "margin-bottom:0.5rem" type="date" id = "last" name = "last"><br><br>
+                <input type="date" id="last" name="last"><br><br>
+                <button type="submit" class="hidden">fin</button>
             </form>
-</div>
-        <button id="btn" style="margin-left:1rem;--color:rgb(88 199 250);--border:2px;--slant:.5em"> Calculate! </button>
+        </div>
+        <button id="btn" type="button"> Calculate! </button>
     </div>
+    <script src="calculate.js"></script>
 </body>
-
-
-<script src="calculate.js"></script>
-
 </html>
