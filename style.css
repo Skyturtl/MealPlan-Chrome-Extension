@@ -7,7 +7,7 @@ body {
   padding-bottom: 2rem;
   box-sizing: border-box;
   width:375px;
-  height:565  px;
+  height:auto;
 }
 
 .header{
@@ -53,14 +53,16 @@ label {
 .w0 {
   width: 250px;
   left: -825%;
-  padding: 5px 0;
 }
 
 .w1{
   width: 165px;
   left: -1000%;
-  padding-left: 5px;
-  padding-right: 5px;
+}
+
+.w2{
+  width: 250px;
+  left: -1440%;
 }
 
 .tooltip .tooltiptext {
@@ -76,6 +78,7 @@ label {
   opacity: 0;
   transition: opacity 1s;
   font-size:12px;
+  padding:5px;
 }
 
 #plan{
@@ -201,4 +204,8 @@ label {
   button:active {
     --s: #0005;
     transition: none;
+  }
+
+  input[type="number"]{
+    width:90px;
   }
